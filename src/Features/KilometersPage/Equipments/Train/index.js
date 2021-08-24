@@ -5,7 +5,7 @@ import actions from './Redux/Actions';
 import TrainKilometers from './Listing';
 
 const mapStateToProps = (state) => {
-  const { trainkm } = state;
+  const { trainkm } = state.kilometersPage;
   return { trainkm };
 };
 

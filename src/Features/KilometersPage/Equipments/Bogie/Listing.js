@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Listing from '../Common/Listing';
+import Listing from '../../Common/Listing';
 
 const BogieKilometers = ({ ...props }) => {
     const { loadBogieKms } = props;

@@ -12,7 +12,7 @@ const Listing = ({name, source}) => {
 
     const renderListingLine = () => {
         return source.data.map(item => (
-            <div className="line">
+            <div className="line" key={`${item[`${name}Code`]}${item[`${name}DateKm`]}`}>
                 <div>{item[`${name}Code`]}</div>
                 <div>{getShortDateAsNumbers(item[`${name}DateKm`])}</div>
                 <div>{item[`${name}Km`]}</div>

@@ -5,7 +5,7 @@ import actions from './Redux/Actions';
 import BogieKilometers from './Listing';
 
 const mapStateToProps = (state) => {
-  const { bogiekm } = state;
+  const { bogiekm } = state.kilometersPage;
   return { bogiekm };
 };
 

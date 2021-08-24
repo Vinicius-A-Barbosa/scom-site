@@ -2,16 +2,16 @@ import { connect } from 'react-redux';
 
 import actions from './Redux/Actions';
 
-import ConverterKilometers from './Listing';
+import AxleKilometers from './Listing';
 
 const mapStateToProps = (state) => {
-  const { converterkm } = state;
-  return { converterkm };
+  const { axlekm } = state.kilometersPage;
+  return { axlekm };
 };
 
 const mapDispatchToProps = dispatch => ({
-    loadConverterKms: () => {
-    dispatch(actions.loadConverterKms());
+    loadAxleKms: () => {
+    dispatch(actions.loadAxleKms());
   },
 });
 
@@ -19,4 +19,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ConverterKilometers);
+)(AxleKilometers);
