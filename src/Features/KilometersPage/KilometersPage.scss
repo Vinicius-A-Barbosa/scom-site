@@ -13,23 +13,6 @@
         background-color: #04482e;
         padding-bottom: 24px;
         padding-top: 16px;
-
-        .tabs {
-            display: flex;
-            align-items: flex-start;
-            button {
-                color: white;
-                background-color: unset;
-                border: none;
-                cursor: pointer;
-            }
-
-            .isClickedtrue {
-                color: #04482e;
-                background-color: white;
-                border-radius: 4px;
-            }
-        }
     }
     .table {
         background-color: white;

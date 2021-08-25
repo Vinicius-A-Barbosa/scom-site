@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Tabs from '../../Common/Tabs/Tabs';
 import TrainKilometers from './Equipments/Train';
 import ConverterKilometers from './Equipments/Converter';
 import BogieKilometers from './Equipments/Bogie';
@@ -20,23 +21,15 @@ const KilometersPage = () => {
         { id: 'Roda', value: <WheelKilometers /> },
     ];
 
-    const getCurrentEquipmentData = () => {
-        return tabsList.find(item => item.id === currentEquipment).value;
-    }
-
     return (
         <div className="kilometersPage">
             <div className="header"><h3>Quilometragem</h3></div>
             <div className="body">
-                <div className="tabs">
-                    <button type="button" className={`isClicked${currentEquipment==="Trem"}`} onClick={() => setCurrentEquipment("Trem")}>Trem</button>
-                    <button type="button" className={`isClicked${currentEquipment==="Conversor"}`} onClick={() => setCurrentEquipment("Conversor")}>Conversor</button>
-                    <button type="button" className={`isClicked${currentEquipment==="Truque"}`} onClick={() => setCurrentEquipment("Truque")}>Truque</button>
-                    <button type="button" className={`isClicked${currentEquipment==="Motor"}`} onClick={() => setCurrentEquipment("Motor")}>Motor</button>
-                    <button type="button" className={`isClicked${currentEquipment==="Eixo"}`} onClick={() => setCurrentEquipment("Eixo")}>Eixo</button>
-                    <button type="button" className={`isClicked${currentEquipment==="Roda"}`} onClick={() => setCurrentEquipment("Roda")}>Roda</button>
-                </div>
-                {getCurrentEquipmentData()}
+                <Tabs
+                    tabsList={tabsList}
+                    currentTab={currentEquipment}
+                    setCurrentTab={(value) => setCurrentEquipment(value)}
+                />
             </div>
         </div>
     );

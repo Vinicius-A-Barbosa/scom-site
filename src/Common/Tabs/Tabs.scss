@@ -1,0 +1,20 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    >.navigation {
+        display: flex;
+        align-items: flex-start;
+    }
+    button {
+        color: white;
+        background-color: unset;
+        border: none;
+        cursor: pointer;
+    }
+
+    .isClickedtrue {
+        color: #04482e;
+        background-color: white;
+        border-radius: 4px 4px 0px 0px;
+    }
+}
