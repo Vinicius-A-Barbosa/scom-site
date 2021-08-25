@@ -1,5 +1,3 @@
-import EngineKilometersService from './Service';
-
 const DUCK_NAME = 'enginekm';
 
 export const LOAD_ENGINE_KMS_STARTED = `${DUCK_NAME}/LOAD_ENGINE_KMS_STARTED`;
@@ -20,30 +18,16 @@ const loadEngineKmsFailed = error => ({
     error
 });
 
-const loadEngineKms = () => async (dispatch) => {
-    dispatch(loadEngineKmsStarted());
-    let data = [];
-    try {
-        data = await EngineKilometersService.getEngineKilometers();
-        dispatch(loadEngineKmsSucceed(data));
-    } catch (err) {
-        dispatch(loadEngineKmsFailed(err));
-    }
-};
+export const types = {
+    LOAD_ENGINE_KMS_STARTED,
+    LOAD_ENGINE_KMS_SUCCEED,
+    LOAD_ENGINE_KMS_FAILED,
+}
 
 const actions = {
-    DUCK_NAME,
-
-    types: {
-        LOAD_ENGINE_KMS_STARTED,
-        LOAD_ENGINE_KMS_SUCCEED,
-        LOAD_ENGINE_KMS_FAILED,
-    },
-
     loadEngineKmsStarted,
     loadEngineKmsSucceed,
     loadEngineKmsFailed,
-    loadEngineKms,
 };
 
 export default actions;

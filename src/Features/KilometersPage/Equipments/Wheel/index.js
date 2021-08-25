@@ -1,17 +1,16 @@
 import { connect } from 'react-redux';
 
-import actions from './Redux/Actions';
+import loadWheelKms from './Redux/Operations';
 
 import WheelKilometers from './Listing';
 
-const mapStateToProps = (state) => {
-  const { wheelkm } = state.kilometersPage;
-  return { wheelkm };
-};
+const mapStateToProps = ({kilometersPage}) => ({
+  wheelkm: kilometersPage.wheelkm,
+});
 
 const mapDispatchToProps = dispatch => ({
     loadWheelKms: () => {
-    dispatch(actions.loadWheelKms());
+    dispatch(loadWheelKms());
   },
 });
 

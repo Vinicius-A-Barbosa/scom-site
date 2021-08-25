@@ -1,6 +1,4 @@
-import actions from './Actions';
-
-export const reducerName = actions.DUCK_NAME;
+import { types } from './Actions';
 
 const INITIAL_STATE = {
     loading: false,
@@ -11,14 +9,14 @@ const INITIAL_STATE = {
 
 const reducer = (state = INITIAL_STATE, action) => {
     switch(action.type) {
-        case actions.types.LOAD_AXLE_KMS_STARTED:
+        case types.LOAD_AXLE_KMS_STARTED:
             return {
                 ...state,
                 loading: true,
                 success: false,
                 error: null,
             };
-        case actions.types.LOAD_AXLE_KMS_SUCCEED:
+        case types.LOAD_AXLE_KMS_SUCCEED:
             return {
                 ...state,
                 loading: false,
@@ -28,7 +26,7 @@ const reducer = (state = INITIAL_STATE, action) => {
                     ...action.data,
                 ],
             };
-        case actions.types.LOAD_AXLE_KMS_FAILED:
+        case types.LOAD_AXLE_KMS_FAILED:
             return {
                 ...state,
                 loading: false,

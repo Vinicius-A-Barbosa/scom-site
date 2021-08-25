@@ -1,5 +1,3 @@
-import AxleKilometersService from './Service';
-
 const DUCK_NAME = 'axlekm';
 
 export const LOAD_AXLE_KMS_STARTED = `${DUCK_NAME}/LOAD_AXLE_KMS_STARTED`;
@@ -20,30 +18,16 @@ const loadAxleKmsFailed = error => ({
     error
 });
 
-const loadAxleKms = () => async (dispatch) => {
-    dispatch(loadAxleKmsStarted());
-    let data = [];
-    try {
-        data = await AxleKilometersService.getAxleKilometers();
-        dispatch(loadAxleKmsSucceed(data));
-    } catch (err) {
-        dispatch(loadAxleKmsFailed(err));
-    }
+export const types = {
+    LOAD_AXLE_KMS_STARTED,
+    LOAD_AXLE_KMS_SUCCEED,
+    LOAD_AXLE_KMS_FAILED,
 };
 
 const actions = {
-    DUCK_NAME,
-
-    types: {
-        LOAD_AXLE_KMS_STARTED,
-        LOAD_AXLE_KMS_SUCCEED,
-        LOAD_AXLE_KMS_FAILED,
-    },
-
     loadAxleKmsStarted,
     loadAxleKmsSucceed,
     loadAxleKmsFailed,
-    loadAxleKms,
 };
 
 export default actions;

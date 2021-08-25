@@ -1,5 +1,3 @@
-import ConverterKilometersService from './Service';
-
 const DUCK_NAME = 'converterkm';
 
 export const LOAD_CONVERTER_KMS_STARTED = `${DUCK_NAME}/LOAD_CONVERTER_KMS_STARTED`;
@@ -20,30 +18,16 @@ const loadConverterKmsFailed = error => ({
     error
 });
 
-const loadConverterKms = () => async (dispatch) => {
-    dispatch(loadConverterKmsStarted());
-    let data = [];
-    try {
-        data = await ConverterKilometersService.getConverterKilometers();
-        dispatch(loadConverterKmsSucceed(data));
-    } catch (err) {
-        dispatch(loadConverterKmsFailed(err));
-    }
+export const types = {
+    LOAD_CONVERTER_KMS_STARTED,
+    LOAD_CONVERTER_KMS_SUCCEED,
+    LOAD_CONVERTER_KMS_FAILED,
 };
 
 const actions = {
-    DUCK_NAME,
-
-    types: {
-        LOAD_CONVERTER_KMS_STARTED,
-        LOAD_CONVERTER_KMS_SUCCEED,
-        LOAD_CONVERTER_KMS_FAILED,
-    },
-
     loadConverterKmsStarted,
     loadConverterKmsSucceed,
     loadConverterKmsFailed,
-    loadConverterKms,
 };
 
 export default actions;

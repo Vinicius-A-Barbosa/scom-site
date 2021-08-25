@@ -1,17 +1,16 @@
 import { connect } from 'react-redux';
 
-import actions from './Redux/Actions';
+import loadBogieKms from './Redux/Operations';
 
 import BogieKilometers from './Listing';
 
-const mapStateToProps = (state) => {
-  const { bogiekm } = state.kilometersPage;
-  return { bogiekm };
-};
+const mapStateToProps = ({kilometersPage}) => ({
+  bogiekm: kilometersPage.bogiekm,
+});
 
 const mapDispatchToProps = dispatch => ({
     loadBogieKms: () => {
-    dispatch(actions.loadBogieKms());
+    dispatch(loadBogieKms());
   },
 });
 

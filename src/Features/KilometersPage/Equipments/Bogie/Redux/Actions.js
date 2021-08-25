@@ -1,5 +1,3 @@
-import BogieKilometersService from './Service';
-
 const DUCK_NAME = 'bogiekm';
 
 export const LOAD_BOGIE_KMS_STARTED = `${DUCK_NAME}/LOAD_BOGIE_KMS_STARTED`;
@@ -20,30 +18,16 @@ const loadBogieKmsFailed = error => ({
     error
 });
 
-const loadBogieKms = () => async (dispatch) => {
-    dispatch(loadBogieKmsStarted());
-    let data = [];
-    try {
-        data = await BogieKilometersService.getBogieKilometers();
-        dispatch(loadBogieKmsSucceed(data));
-    } catch (err) {
-        dispatch(loadBogieKmsFailed(err));
-    }
+export const types = {
+    LOAD_BOGIE_KMS_STARTED,
+    LOAD_BOGIE_KMS_SUCCEED,
+    LOAD_BOGIE_KMS_FAILED,
 };
 
 const actions = {
-    DUCK_NAME,
-
-    types: {
-        LOAD_BOGIE_KMS_STARTED,
-        LOAD_BOGIE_KMS_SUCCEED,
-        LOAD_BOGIE_KMS_FAILED,
-    },
-
     loadBogieKmsStarted,
     loadBogieKmsSucceed,
     loadBogieKmsFailed,
-    loadBogieKms,
 };
 
 export default actions;
