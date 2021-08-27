@@ -1,13 +1,17 @@
 import React from 'react';
 import KilometersPage from './Features/KilometersPage/KilometersPage';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <KilometersPage />
-      </header>
+    <div className="app">
+      <div className="menu">
+      </div>
+      <div className="page">
+        <div className="content">
+          <KilometersPage />
+        </div>
+      </div>
     </div>
   );
 }
