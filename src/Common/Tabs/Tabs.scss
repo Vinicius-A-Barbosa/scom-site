@@ -1,3 +1,5 @@
+@import '../../Utils/Styles/colors.scss';
+
 .tabs {
     display: flex;
     flex-direction: column;
@@ -5,18 +7,18 @@
     >.navigation {
         display: flex;
         align-items: flex-start;
-        background-color: #0b1a2f;
+        background-color: $cbtuBlue;
     }
     button {
-        color: white;
-        background-color: #0b1a2f;
+        color: $backgroundPrimaryColor;
+        background-color: $cbtuBlue;
         border: none;
         cursor: pointer;
     }
 
     .isClickedtrue {
-        color: #0b1a2f;
-        background-color: white;
+        color: $cbtuBlue;
+        background-color: $backgroundPrimaryColor;
         border-radius: 4px 4px 0px 0px;
     }
 

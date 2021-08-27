@@ -1,14 +1,16 @@
+@import 'Utils/Styles/colors.scss';
+
 .app {
     display: flex;
     flex-direction: row;
     text-align: center;
-    background-color: #cbd9eb;
-    color: #023002;
+    background-color: $backgroundSecondaryColor;
+    color: $textPrimaryColor;
 
     >.menu {
         width: 240px;
         height: 100vh;
-        background-color: #051832;
+        background-color: $cbtuBlue;
     }
     
     >.page {

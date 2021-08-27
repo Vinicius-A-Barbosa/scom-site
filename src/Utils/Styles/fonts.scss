@@ -1,0 +1,170 @@
+@import './colors.scss';
+
+$fontFamily: 'Circular Std', sans-serif;
+$fontWeightLight: 300;
+$fontWeightRegular: normal;
+$fontWeightMedium: 500;
+$fontWeightSemibold: bold;
+
+@mixin fontCommon {
+  font-family: $fontFamily;
+  font-style: normal;
+  margin: 0;
+}
+
+@mixin titleColor {
+  color: $textBlackColor;
+}
+
+@mixin textColor {
+  color: $textPrimaryColor;
+}
+
+p {
+  @include fontCommon();
+  @include textColor();
+}
+
+h1 {
+  @include fontCommon();
+  @include titleColor();
+  font-weight: $fontWeightLight;
+  font-size: 52px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+}
+
+h2 {
+  @include fontCommon();
+  @include titleColor();
+  font-weight: $fontWeightMedium;
+  font-size: 44px;
+  line-height: 54px;
+}
+
+h3 {
+  @include fontCommon();
+  @include titleColor();
+  font-weight: $fontWeightSemibold;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0.1px;
+}
+
+h4 {
+  @include fontCommon();
+  @include titleColor();
+  font-weight: $fontWeightMedium;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+}
+
+h5 {
+  @include fontCommon();
+  @include titleColor();
+  font-weight: $fontWeightSemibold;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+}
+
+h6 {
+  @include fontCommon();
+  @include titleColor();
+  font-weight: $fontWeightMedium;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+
+.font-subtitle1 {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightMedium;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.font-subtitle2 {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightMedium;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+}
+
+.font-body1 {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightRegular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.font-body2 {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightRegular;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.1px;
+}
+
+.font-small1 {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightMedium;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+
+.font-small2 {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightRegular;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+
+.font-small3 {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightRegular;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.2px;
+}
+
+.font-small4 {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightMedium;
+  font-size: 8px;
+  line-height: 14px;
+  letter-spacing: 0.2px;
+}
+
+.font-button {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightMedium;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.font-initials {
+  @include fontCommon();
+  @include textColor();
+  font-weight: $fontWeightSemibold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
