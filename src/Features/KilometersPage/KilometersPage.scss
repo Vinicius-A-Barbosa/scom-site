@@ -1,0 +1,19 @@
+.kilometersPage {
+    display: flex;
+    flex-direction: column;
+    >div {
+        border-radius: 4px;
+    }
+    >.header {
+        background-color: white;
+        margin: 24px 0px 24px 0px;
+        text-align: left;
+        padding: 8px 24px;
+    }
+    >.body {
+        display: flex;
+        height: calc(100vh - 188px);
+        background-color: white;
+        overflow: hidden;
+    }
+}

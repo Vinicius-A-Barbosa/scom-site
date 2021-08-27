@@ -1,0 +1,26 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    >.navigation {
+        display: flex;
+        align-items: flex-start;
+        background-color: #0b1a2f;
+    }
+    button {
+        color: white;
+        background-color: #0b1a2f;
+        border: none;
+        cursor: pointer;
+    }
+
+    .isClickedtrue {
+        color: #0b1a2f;
+        background-color: white;
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    .content {
+        overflow: hidden;
+    }
+}

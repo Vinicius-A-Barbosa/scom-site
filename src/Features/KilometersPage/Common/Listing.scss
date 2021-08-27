@@ -1,0 +1,41 @@
+.kilometersListing {
+    display: grid;
+    grid-template-rows: auto;
+    height: 100%;
+    background-color: white;
+    .tableHeader {
+        font-weight: 500;
+    }
+    .line {
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        text-align: left;
+        border-top: 1px solid #cadbf2;
+        font-size: 14px;
+        div {
+            display: flex;
+            align-items: center;
+            padding: 6px 0px;
+        }
+        div:first-of-type {
+            padding-left: 24px;
+        }
+        div:last-of-type {
+            padding-right: 24px;
+        }
+
+        .skeleton-item {
+            div {
+            background-color: #d0dbeb;
+            width: 20%;
+            height: 14px;
+            }
+        }
+    }
+    .tableBody-wrapper {
+        overflow: overlay;
+        .tableBody {
+            border-bottom: 1px solid #cadbf2;
+        }
+    }
+}
