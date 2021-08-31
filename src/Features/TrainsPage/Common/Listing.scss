@@ -1,0 +1,27 @@
+.trainsPageListing {
+    width: 100%;
+    height: 83%;
+    .generalListing {
+        .line {
+            grid-template-columns: 20% 20% 20% 20% 15% 5%;
+            align-items: center;
+        }
+        .content {
+            display: grid;
+            grid-template-rows: auto;
+            grid-gap: 8px;
+            align-items: flex-start;
+            border-top: 1px solid #cadbf2;
+            font-size: 14px;
+            padding: 8px 0px 8px 24px;
+            >.carLine {
+                display: grid;
+                grid-template-columns: 10% 90%;
+                .carPosition {
+                    padding: 5px;
+                    background-color: #cadbf2;
+                }
+            }
+        }
+    }
+}

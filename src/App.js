@@ -1,5 +1,6 @@
 import React from 'react';
-import KilometersPage from './Features/KilometersPage/KilometersPage';
+//import KilometersPage from './Features/KilometersPage/KilometersPage';
+import TrainsPage from './Features/TrainsPage/TrainsPage';
 import './App.scss';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       </div>
       <div className="page">
         <div className="content">
-          <KilometersPage />
+          <TrainsPage />
         </div>
       </div>
     </div>
